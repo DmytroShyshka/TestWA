@@ -39,7 +39,21 @@ let distanceInput = document.getElementById("distance");
 let AddCarButton = document.getElementById("add-car");
 let GetAllButton = document.getElementById("get-all-cars");
 let DeleteButton = document.getElementById("delete-car");
-let carsTable = document.getElementById("cars-table")
+
+AddCarButton.addEventListener("click", function(){
+    CarService.addCar(yearInput.value, brandInput.value, modelInput.value, distanceInput.value);
+    console.log(CarService);
+});
+
+GetAllButton.addEventListener("click", function(){
+    console.log(CarService.GetAllCars());
+});
+
+DeleteButton.addEventListener("click", function(){
+    CarService.delCar(0);
+    console.log(CarService);
+});
+
 
 
 
