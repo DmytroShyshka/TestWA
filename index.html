@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car service</title>
+    <script src="script.js"></script>
+</head>
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table {
+        margin-top: 20px;
+        border-collapse: collapse;
+        width: 50%;
+
+    }
+
+    th, td{
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: lightgray;
+    }
+</style>
+<body>
+    <div class = "container">
+        <h1>Dupont Auto Service</h1>
+
+        <div>
+            <input type="text"  id="year" placeholder="Year of production">
+            <input type="text"  id="brand" placeholder="Brand">
+            <input type="text"  id="model" placeholder="Model">
+            <input type="text"  id="distance" placeholder="Distance driven">
+            <button id="add-car">Add Car</button>
+        </div>
+        <button id="get-all-cars">Get all cars</button>
+        <button id="delete-car" disabled>Delete Car</button>
+    </div>
+</body>
+</html>
