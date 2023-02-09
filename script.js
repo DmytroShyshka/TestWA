@@ -54,6 +54,16 @@ DeleteButton.addEventListener("click", function(){
     console.log(CarService);
 });
 
-
+function displayCars() {
+    let cars = CarService.GetAllCars();
+    let carsDiv = document.getElementById("cars");
+    carsDiv.innerHTML = "";
+    for (let i = 0; i < cars.length; i++) {
+        let car = cars[i];
+        let carDiv = document.createElement("div");
+        carDiv.innerHTML = car.year + " " + car.brand + " " + car.model + " " + car.distance;
+        carsDiv.appendChild(carDiv);
+    }
+}
 
 
